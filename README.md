@@ -3,7 +3,7 @@
 
 This project processes and visualizes NASA's web server logs using an ETL pipeline built with PySpark and an interactive dashboard built using Streamlit.
 
----
+
 
 ## 📁 Project Structure
 
@@ -13,7 +13,7 @@ This project processes and visualizes NASA's web server logs using an ETL pipeli
 | `verify_and_download.py` | Verifies the Parquet output by downloading it locally and displaying a preview in the terminal. |
 | `nasa_dashboard.py`    | Launches an interactive Streamlit dashboard to visualize the processed insights. |
 
----
+
 
 ## ⚙️ Requirements
 
@@ -21,7 +21,7 @@ This project processes and visualizes NASA's web server logs using an ETL pipeli
 - Apache Spark
 - Hadoop with HDFS running locally
 
----
+
 
 ## 🔧 Setup Instructions
 
@@ -34,7 +34,7 @@ spark-submit spark_nasa_etl.py
 - **Input HDFS Path**: `hdfs://localhost:9000/data/nasa_logs/`
 - **Output HDFS Path**: `hdfs://localhost:9000/data/nasa_parquet_outputs/`
 
----
+
 
 ### 2️⃣ Download & Preview Parquet Data
 
@@ -46,7 +46,7 @@ spark-submit verify_and_download.py
   `/home/hdoop/bdsel/parquet_downloads/`
 - Displays content using `df.show()` from Spark.
 
----
+
 
 ### 3️⃣ Set Up Python Virtual Environment
 
@@ -57,7 +57,7 @@ pip install --upgrade pip
 pip install streamlit pandas matplotlib pyarrow
 ```
 
----
+
 
 ### 4️⃣ Launch the Streamlit Dashboard
 
@@ -67,7 +67,7 @@ streamlit run nasa_dashboard.py
 
 📍 Make sure the local folder `/home/hdoop/bdsel/parquet_downloads/` exists and contains all Parquet outputs before running the dashboard.
 
----
+
 
 ## 📊 Dashboard Visualizations
 
@@ -81,7 +81,7 @@ streamlit run nasa_dashboard.py
 - ✅ Error Category Pie Chart  
 - ✅ Most Popular Files  
 
----
+
 
 ## 🔚 Deactivate the Virtual Environment
 
@@ -89,10 +89,3 @@ streamlit run nasa_dashboard.py
 deactivate
 ```
 
----
-
-## 📌 Notes
-
-- All Spark operations depend on the correct HDFS setup.
-- Parquet files must exist locally for Streamlit to read them.
-- This project can be extended to use live streaming logs and Kafka integration.
