@@ -14,8 +14,10 @@ Spark installed
 Python 3.8+
 
 🧱 Step-by-step Instructions
+
 1️⃣ Run Spark ETL Script
 spark-submit spark_nasa_etl.py
+
 This step:
 Reads raw logs from: hdfs://localhost:9000/data/nasa_logs/
 Performs multiple aggregations
